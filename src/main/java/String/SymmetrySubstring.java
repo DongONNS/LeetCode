@@ -17,8 +17,17 @@ package String;
         输入的字符串长度不会超过1000。
 */
 
+import javax.swing.plaf.IconUIResource;
+
 class Solution {
-    public int countSubstrings(String s) {
+
+    public static void main(String[] args) {
+        String string = "aaa";
+        int num = countSubstrings(string);
+        System.out.println(num);
+    }
+
+    public static int countSubstrings(String s) {
         int count = 0;
         int i;
         for(i = 0; i < s.length(); i++){
@@ -27,7 +36,7 @@ class Solution {
         }
         return count;
     }
-    public int countPalindrome (String s, int left, int right){
+    public static int countPalindrome (String s, int left, int right){
         int count = 0;
         while(left >= 0 && right < s.length() && s.charAt(left--) == s.charAt(right++)){
             count++;
