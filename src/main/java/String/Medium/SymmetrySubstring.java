@@ -1,4 +1,4 @@
-package String;
+package String.Medium;
 
 /*
 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
@@ -17,8 +17,9 @@ package String;
         输入的字符串长度不会超过1000。
 */
 
-import javax.swing.plaf.IconUIResource;
-
+/**
+ * 采用动态规划解决回文字串问题
+ */
 class Solution {
 
     public static void main(String[] args) {
@@ -27,23 +28,41 @@ class Solution {
         System.out.println(num);
     }
 
+
     public static int countSubstrings(String s) {
-        int count = 0;
-        int i;
-        for(i = 0; i < s.length(); i++){
-            count += countPalindrome(s, i, i);
-            count += countPalindrome(s, i, i + 1);
+        if (s == null || s.length() == 0) {
+            return 0;
         }
-        return count;
+        int result = 0;
+        boolean[][] dp = buildDPForCountSubstrings(s);
+        for (int j = 0; j < dp.length; j++) {
+            for (int i = 0; i <= j; i++) {
+                if (dp[i][j]) {
+                    result++;
+                }
+            }
+        }
+        return result;
     }
-    public static int countPalindrome (String s, int left, int right){
-        int count = 0;
-        while(left >= 0 && right < s.length() && s.charAt(left--) == s.charAt(right++)){
-            count++;
+
+    private static boolean[][] buildDPForCountSubstrings(String s) {
+        int n = s.length();
+        boolean[][] dp = new boolean[n][n];
+        //注意i 和j 的边界，只计算上半部分，j - i <= 1是为了处理边界，dp[i + 1][j - 1]是dp[i][j]砍头去尾后的是否是回文
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i <= j; i++) {
+                if (i == j) {
+                    dp[i][j] = true;
+                } else {
+                    dp[i][j] = s.charAt(i) == s.charAt(j) && (j - i <= 1 || dp[i + 1][j - 1]);
+                }
+            }
         }
-        return count;
+        return dp;
     }
 }
+
+
 
 
 
