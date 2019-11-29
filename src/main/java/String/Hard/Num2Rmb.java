@@ -108,20 +108,20 @@ public class Num2Rmb {
             }
             return re;
         }
+
+
         //对于金额的整数部分在12位数以内的处理，以4位数为一组，
         //如1234（亿）,5678（万）,1234（元）.89，
         private String zhengDivade(String zheng)
         {
             int len = zheng.length();
             String Re = "";
+            //这里的n代表的是组数
             int n = 0;
-        //判断整数部分的长度，考虑需要分几个组
-            if(len>=9)
-                n = 3;
-            else if(len>=5)
-                n = 2;
-            else if(len>=1)
-                n = 1;
+            //判断整数部分的长度，考虑需要分几个组
+            if(len>=9)      n = 3;
+            else if(len>=5) n = 2;
+            else if(len>=1) n = 1;
         //若位数非4的倍数，则在前面补0，直到位数为4的倍数为止
         //如 12,2345补为0012,2345
             if(len%4!=0)
@@ -136,6 +136,7 @@ public class Num2Rmb {
                 zh += zheng;
                 zheng = zh;
             }
+
         //进行n个组合的串联
         //进行n次循环
             for(int i=0;i<n;i++)
@@ -145,6 +146,7 @@ public class Num2Rmb {
         //长度在变化
                 len = zheng.length();
         //提取出整数部分后四位，进行分开的转换
+        //这个substring方法拿出来的是从len-4后面的所有数，就是拿到末四位数字;
                 Zheng = zheng.substring(len-4);
         //除去已经提取的字符串以外的字符串，字符串更新
                 zheng = zheng.substring(0, len-4);
