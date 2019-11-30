@@ -17,6 +17,7 @@ public class WarmmerIndex {
     }
 
     //实现思路比较简单，就是对你当前温度后面的温度进行遍历，找到一个最近的位置，将他们呢两个的下标相减得到结果。
+    //但是因为需要每次都遍历 所以比较耗时
     public static int[] dailyTemperatures(int[] T) {
         int length = T.length;
         int[] result = new int[length];
