@@ -1,4 +1,4 @@
-package LinkedList.Medium;
+package LinkedListType.Medium;
 
 /**
  * Definition for singly-linked list.
@@ -12,7 +12,7 @@ package LinkedList.Medium;
 //public class SortLinedList {
 //    public ListNode sortList(ListNode head) {
 //        if(head == null || head.next == null) return head;
-//        //Í¨¹ý¿ìÂýÖ¸ÕëÄÃµ½ÖÐ¼äµÄ½Úµã
+//        //Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ð¼ï¿½Ä½Úµï¿½
 //        ListNode fast = head.next;
 //        ListNode slow = head;
 //        while(fast != null && fast.next != null){
@@ -21,15 +21,15 @@ package LinkedList.Medium;
 //        }
 //
 //        ListNode temp = slow.next;
-//        // //ÇÐ¶ÏÖÐµãºóÃæµÄµã
+//        // //ï¿½Ð¶ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Äµï¿½
 //        slow.next = null;
-//        // //¼ÌÐø·Ö¸îÖÐ¼ä½ÚµãµÄ×ó±ß
+//        // //ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ð¼ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
 //        ListNode left = sortList(head);
-//        // //¼ÌÐø·Ö¸îÖÐ¼ä½ÚµãµÄÓÒ±ß
+//        // //ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ð¼ï¿½Úµï¿½ï¿½ï¿½Ò±ï¿½
 //        ListNode right = sortList(temp);
-//        // µÃµ½¹é²¢Á´±íµÄ±íÍ·
+//        // ï¿½Ãµï¿½ï¿½é²¢ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Í·
 //        ListNode h = new ListNode(0);
-//        // //½«hµÄÒýÓÃ¸³¸øres;
+//        // //ï¿½ï¿½hï¿½ï¿½ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½res;
 //        ListNode res = h;
 //
 //        while(left!=null&&right!=null){
