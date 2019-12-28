@@ -9,7 +9,7 @@
 //    int dales[];
 //    int n;
 //    // output
-//    List<List<String>> output = new ArrayList();
+//    List<List<letecodePractice.String>> output = new ArrayList();
 //    // queens positions
 //    int queens[];
 //
@@ -33,7 +33,7 @@
 //    }
 //
 //    public void addSolution() {
-//        List<String> solution = new ArrayList<String>();
+//        List<letecodePractice.String> solution = new ArrayList<letecodePractice.String>();
 //        for (int i = 0; i < n; ++i) {
 //            int col = queens[i];
 //            StringBuilder sb = new StringBuilder();
@@ -59,7 +59,7 @@
 //        }
 //    }
 //
-//    public List<List<String>> solveNQueens(int n) {
+//    public List<List<letecodePractice.String>> solveNQueens(int n) {
 //        this.n = n;
 //        rows = new int[n];
 //        hills = new int[4 * n - 1];
