@@ -132,7 +132,7 @@ public class BinarySearchTree2<T extends Comparable> {
             } else { // 当前结点是其父节点的右孩子
                 parent.right = cur.right;
             }
-        } else {//当前结点有左孩子，也有右孩子
+        } else {//当前结点有左孩子，也有右孩子,需要对树进行翻转gi
             Node<T> successor = getSuccessor(cur);
             if (cur == root) {
                 root = successor;
