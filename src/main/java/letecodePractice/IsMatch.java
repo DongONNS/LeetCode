@@ -1,7 +1,6 @@
 package letecodePractice;
 
 public class IsMatch {
-}
     public boolean isMatch(String text, String pattern) {
         boolean[][] dp = new boolean[text.length() + 1][pattern.length() + 1];
         dp[text.length()][pattern.length()] = true;
