@@ -1,4 +1,4 @@
-package letecodePractice;
+package letecodePractice.onetoonehundred;
 
 public class IsMatch {
     public boolean isMatch(String text, String pattern) {

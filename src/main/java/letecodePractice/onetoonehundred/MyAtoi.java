@@ -1,4 +1,4 @@
-package letecodePractice;
+package letecodePractice.onetoonehundred;
 
 public class MyAtoi {
     public int myAtoi(String str) {

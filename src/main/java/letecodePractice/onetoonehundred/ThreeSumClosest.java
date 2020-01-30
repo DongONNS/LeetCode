@@ -1,4 +1,4 @@
-package letecodePractice;
+package letecodePractice.onetoonehundred;
 
 import java.util.Arrays;
 import java.util.Queue;

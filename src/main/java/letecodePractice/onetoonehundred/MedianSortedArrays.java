@@ -1,4 +1,4 @@
-package letecodePractice;
+package letecodePractice.onetoonehundred;
 
 public class MedianSortedArrays {
     public double findMedianSortedArrays(int[] A, int[] B) {
