@@ -4,7 +4,7 @@ public class MergeKLists {
     public ListNode mergeKLists(ListNode[] lists){
         int len = lists.length;
         if (len == 0) return null;
-        //将n个链表以中间为对称，合并;
+        //将n个链表以中间为对称，并用合并函数进行合并;
         while(len>1){
             for (int i=0;i<len/2;i++){
                 lists[i] = mergeTwoLists(lists[i],lists[len-1-i]);
