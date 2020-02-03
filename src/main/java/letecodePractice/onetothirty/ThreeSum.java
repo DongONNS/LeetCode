@@ -1,4 +1,4 @@
-package letecodePractice.onetoonehundred;
+package letecodePractice.onetothirty;
 
 import java.util.ArrayList;
 import java.util.Arrays;
