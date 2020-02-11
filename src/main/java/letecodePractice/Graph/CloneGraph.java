@@ -15,7 +15,8 @@ public class CloneGraph {
         if (lookup.containsKey(node)) return lookup.get(node);
         Node clone = new Node(node.val, new ArrayList<>());
         lookup.put(node, clone);
-        for (Node n : node.neighbors)clone.neighbors.add(dfs(n,lookup));
+        for (Node n : node.neighbors)
+            clone.neighbors.add(dfs(n,lookup));
         return clone;
     }
 }
