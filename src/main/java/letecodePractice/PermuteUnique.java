@@ -18,7 +18,17 @@ public class PermuteUnique {
         return res;
     }
 
+    /**
+     *
+     * @param nums  待进行搜索的数组
+     * @param len   带搜索数组的长度
+     * @param depth 已经搜索的深度
+     * @param used
+     * @param path  存放搜索过程中的结果
+     * @param res   结果数组
+     */
     private void dfs(int[] nums, int len, int depth, boolean[] used, Deque<Integer> path, List<List<Integer>> res) {
+        //搜索到了一条结果
         if (depth == len) {
             res.add(new ArrayList<>(path));
             return;
