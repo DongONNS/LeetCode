@@ -1,9 +1,14 @@
 package letecodePractice.math;
 
 public class MyPow {
-    public double myPow(double x,int n){
+    public static void main(String[] args) {
+        double value = myPow(3, 4);
+        System.out.println(value);
+
+    }
+    public static double myPow(double x,int n){
         long N = n;
-        if(N<0>){
+        if( N < 0){
             x = 1/x;
             N = -N;
         }
