@@ -1,9 +1,11 @@
 package letecodePractice.math;
 
+import java.util.HashMap;
+
 public class isValidSuDuKu {
     public boolean isValidSudoku(char[][] board) {
         // init data
-        HashMap<Integer, Integer> [] rows = new HashMap[9];
+        HashMap<Integer, Integer>[] rows = new HashMap[9];
         HashMap<Integer, Integer> [] columns = new HashMap[9];
         HashMap<Integer, Integer> [] boxes = new HashMap[9];
         for (int i = 0; i < 9; i++) {
