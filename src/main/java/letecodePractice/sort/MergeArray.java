@@ -6,11 +6,17 @@ import java.util.Comparator;
 import java.util.List;
 
 public class MergeArray {
-    public int[][] merge(int[][] intervals) {
+    public static void main(String[] args) {
+        int[][] nums = {{1,3},{2,6},{8,10},{15,18}};
+        int[][] result = merge(nums);
+        for (int[] a: result) {
+            System.out.println(a.toString());
+        }
+    }
+    public static int[][] merge(int[][] intervals) {
         List<int[]> res = new ArrayList<>();
         if (intervals == null || intervals.length == 0)
             return res.toArray(new int[0][]);
-
         // Arrays.sort(intervals, (a, b) -> a[0] - b[0]);// a[0] - b[0]大于0就交换顺序
         // 根据二维数组第一个数字大小按每一行整体排序
         Arrays.sort(intervals, new Comparator<int[]>() {
