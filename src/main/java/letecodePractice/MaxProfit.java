@@ -7,10 +7,29 @@ public class MaxProfit {
         System.out.println(result);
     }
 
-    public static int maxProfit(int[] prices){
-        int result = calculate(prices, 0);
-        return result;
+    public static int maxProfit(int[] prices) {
+        if(prices.length == 0) return 0;
+        int i = 0;
+        int peak = prices[0];
+        int valey = prices[0];
+        int maxProfit = 0;
+        while(i < prices.length-1){
+            while(i < prices.length-1 && prices[i] >= prices[i+1] ){
+                i++;
+            }
+            valey = prices[i];
+            while(i < prices.length - 1 && prices[i] <= prices[i+1]){
+                i++;
+            }
+            peak = prices[i];
+            maxProfit += (peak - valey);
+        }
+        return maxProfit;
     }
+//    public static int maxProfit(int[] prices){
+//        int result = calculate(prices, 0);
+//        return result;
+//    }
 
     public static int calculate(int[] prices,int s){
         if (s >= prices.length) return 0;
