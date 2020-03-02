@@ -1,7 +1,6 @@
 package letecodePractice;
 
 public class IsPlaindrome {
-    //双指针大法好,受我一拜!
     public boolean isPalindrome(String s) {
         s = s.toLowerCase();
         char[] chars = s.toCharArray();
