@@ -5,7 +5,7 @@ public class TitleToNumber {
 
     public static void main(String[] args) {
         String s = "ZY";
-        int result = titleToNumber(s);
+        int result = titleToNum(s);
         System.out.println(result);
     }
     public static int titleToNumber(String s){
@@ -19,6 +19,15 @@ public class TitleToNumber {
             int index = c - 64;
             result += nums[index]*Math.pow(26,len);
             len++;
+        }
+        return result;
+    }
+
+    public static int titleToNum(String s){
+        int result = 0;
+        for(int i = 0;i < s.length();i++){
+            int num = s.charAt(i) - 'A' + 1;
+            result = result*26 + num;
         }
         return result;
     }
