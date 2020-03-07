@@ -1,4 +1,4 @@
-//import java.util.ArrayList;
+package letecodePractice;//import java.util.ArrayList;
 //        import java.util.List;
 //
 //public class NQueens {
