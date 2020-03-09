@@ -1,4 +1,6 @@
-package letecodePractice.onetothirty;
+package letecodePractice;
+
+import letecodePractice.ListNode;
 
 public class MergeKLists {
     public ListNode mergeKLists(ListNode[] lists){

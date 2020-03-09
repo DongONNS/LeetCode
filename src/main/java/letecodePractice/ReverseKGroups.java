@@ -1,4 +1,6 @@
-package letecodePractice.onetothirty;
+package letecodePractice;
+
+import letecodePractice.ListNode;
 
 public class ReverseKGroups {
     public ListNode reverseKGroup(ListNode head, int k) {

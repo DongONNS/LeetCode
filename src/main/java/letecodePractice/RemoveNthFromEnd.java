@@ -1,4 +1,6 @@
-package letecodePractice.onetothirty;
+package letecodePractice;
+
+import letecodePractice.ListNode;
 
 public class RemoveNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {
