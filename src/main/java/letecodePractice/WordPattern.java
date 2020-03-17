@@ -7,7 +7,7 @@ public class WordPattern {
         boolean result = wordPattern(pattern, string);
         System.out.println(result);
     }
-    public boolean wordPattern(String pattern,String string){
+    public static boolean wordPattern(String pattern,String string){
         String[] strArr = string.split(" ");
         if (pattern.length() != strArr.length) return false;
         for(int i=0;i < pattern.length();i++){
