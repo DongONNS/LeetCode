@@ -19,6 +19,26 @@ public class RotateRight {
             System.out.print(node.val+" ");
         }
     }
+//    public static ListNode rotateRight(ListNode head,int k){
+//        if (head == null) return null;
+//        if (head.next == null) return head;
+//        //将链表形成闭环;
+//        ListNode end = head;
+//        int size;
+//        for (size = 1;end.next != null;size++)
+//            end = end.next;
+//        end.next = head;
+//        //将我们的闭环斩断;
+//        ListNode new_end = head;
+//        for (int i =0;i < size - k%size -1;i++)  new_end = new_end.next;
+//        ListNode start = new_end.next;
+//        new_end.next = null;
+//        return start;
+//    }
+
+    //写完发现似乎传递的结果不对，我们的返回的结果无法进行输出......
+    //看了下官方解答，思路是一致的，但是在第一轮循环的时候，将它变成了一个闭环。
+
     public static ListNode rotateRight(ListNode head,int k){
         //得到我们的链表的大小;
         int size = 0;
@@ -29,16 +49,17 @@ public class RotateRight {
             if (node.next == null)
                 end = node;
         }
+        end.next = head;
         k = k%size;
         ListNode cut = head;
         //将我们的队列从size - k的位置分为左右两边;
-        for (int i = 0;i < size - k;i++){
+        for (int i = 0;i < size - k - 1;i++){
             cut = cut.next;
         }
         //这个start就是新的头节点
         ListNode start = cut.next;
         cut.next = null;
-        end.next = head;
+
         return start;
     }
 }
