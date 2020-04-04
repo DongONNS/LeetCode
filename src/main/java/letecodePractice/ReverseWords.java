@@ -47,22 +47,22 @@ public class ReverseWords {
         // remove trailing spaces
         while (left <= right && s.charAt(right) == ' ') --right;
 
-        Deque<String> d = new ArrayDeque();
+        Deque<String> deque = new ArrayDeque();
         StringBuilder word = new StringBuilder();
         // push word by word in front of deque
         while (left <= right) {
             char c = s.charAt(left);
 
             if ((word.length() != 0) && (c == ' ')) {
-                d.offerFirst(word.toString());
+                deque.offerFirst(word.toString());
                 word.setLength(0);
             } else if (c != ' ') {
                 word.append(c);
             }
             ++left;
         }
-        d.offerFirst(word.toString());
+        deque.offerFirst(word.toString());
 
-        return String.join(" ", d);
+        return String.join(" ", deque);
     }
 }
