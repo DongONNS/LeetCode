@@ -4,7 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GrayCode {
-    public List<Integer> grayCode(int n) {
+    public static void main(String[] args) {
+        List<Integer> integers = grayCode(2);
+        for (Integer integer : integers) {
+            System.out.print(integer+" ");
+        }
+    }
+    public static List<Integer> grayCode(int n) {
         List<Integer> res = new ArrayList<Integer>() {{
             add(0);
         }};
