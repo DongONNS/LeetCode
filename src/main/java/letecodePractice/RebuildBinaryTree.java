@@ -1,7 +1,5 @@
 package letecodePractice;
 
-import javax.swing.text.Position;
-
 public class RebuildBinaryTree {
     public static BinaryTreeNode construct(int[] preOrder,int[] inOrder){
         if (preOrder==null||inOrder==null||preOrder.length!=inOrder.length||inOrder.length<1){
