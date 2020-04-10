@@ -1,5 +1,7 @@
 package letecodePractice;
 //要求再O(1)时间内删除一个节点
+//从这道题我们应该看到删除链表中的一个节点不一定非得从头开始找到它的前一个节点，
+//直接将当前节点的值进行修改为后一个节点的值然后将后一个节点删除就可以了
 public class DeleteNode2 {
     public static ListNode deleteNode(ListNode head,ListNode val){
         if (head == null || val == null) return null;
